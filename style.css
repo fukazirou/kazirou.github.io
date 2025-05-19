@@ -1,0 +1,117 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  animation: fadeIn 1.5s ease;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0073e6;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0073e6;
+}
+
+.main-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  animation: zoomIn 1.5s ease;
+}
+
+.info-cards {
+  display: flex;
+  gap: 2em;
+  padding: 3em 2em;
+  background-color: #f0f0f0;
+  flex-wrap: wrap;
+  animation: slideUp 1.2s ease;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 2em;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #0073e6;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 1em;
+  color: #0073e6;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.card a:hover {
+  opacity: 0.7;
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+  background-color: #f5f5f5;
+  font-size: 0.9em;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1.1); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
